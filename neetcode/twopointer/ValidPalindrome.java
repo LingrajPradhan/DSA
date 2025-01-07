@@ -21,6 +21,19 @@ public class ValidPalindrome {
 //	        String value = content.toString();
 //	        return value.equals(content.reverse().toString());
 
+//		// Clean the input string
+//		StringBuilder cleaned = new StringBuilder();
+//		for (char c : s.toCharArray()) {
+//			if (Character.isLetterOrDigit(c)) {
+//				cleaned.append(Character.toLowerCase(c));
+//			}
+//		}
+//
+//		// Check if the cleaned string is a palindrome
+//		String original = cleaned.toString();
+//		String reversed = cleaned.reverse().toString();
+//		return original.equals(reversed);
+
 		if (s.isEmpty()) {
 			return true;
 		}
@@ -43,13 +56,11 @@ public class ValidPalindrome {
 						!= Character.toLowerCase(cTail)) {
 					return false;
 				}
-
 				head++;
 				tail--;
 			}
 		}
 		return true;
-
 	}
 
 }

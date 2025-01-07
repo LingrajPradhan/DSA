@@ -29,7 +29,7 @@ public class ThreeSum {
 					res.add(Arrays.asList(nums[i], nums[j++], nums[k--]));
 				else if (sum > 0)
 					k--;
-				else if (sum < 0)
+				else
 					j++;
 			}
 		}

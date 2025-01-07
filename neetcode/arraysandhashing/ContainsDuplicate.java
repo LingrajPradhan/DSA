@@ -30,25 +30,26 @@ public class ContainsDuplicate {
 		 */
 
 //		//O(nlogn)
-//		boolean check = false;
-//		for (int i = 0; i < nums.length-1; i++) {
-//			Arrays.sort(nums);
-//
-//			if (nums[i] == nums[i + 1]) {
-//				check = true;
-//			}
-//		}
-//
-//		return check;
+		boolean check = false;
+		Arrays.sort(nums);
+		for (int i = 0; i < nums.length-1; i++) {
 
-		Set<Integer> set = new HashSet<>();
+            if (nums[i] == nums[i + 1]) {
+                check = true;
+                break;
+            }
+		}
+
+		return check;
+
+/*		Set<Integer> set = new HashSet<>();
 
 		for (int num : nums) {
 			if (set.contains(num))
 				return true;
 			set.add(num);
 		}
-		return false;
+		return false;*/
 
 	}
 }
