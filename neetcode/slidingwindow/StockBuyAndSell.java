@@ -6,24 +6,24 @@ public class StockBuyAndSell {
 
 		int[] prices = { 7, 1, 5, 3, 6, 4 };
 
-		System.out.println(maxProfit(prices));
+		System.out.println(maxProfitProfit(prices));
 
 	}
 
-	static int maxProfit(int[] prices) {
+	static int maxProfitProfit(int[] prices) {
 
-		int max = 0;
+		int maxProfit = 0;
 
-		int min = Integer.MAX_VALUE;
+		int minPrice = Integer.MAX_VALUE;
 
-		for (int i = 0; i < prices.length; i++) {
-			if (prices[i] < min)
-				min = prices[i];
+        for (int price : prices) {
+            if (price < minPrice)
+                minPrice = price;
 
-			else if (prices[i] > min)
-				max = Math.max(prices[i] - min, max);
-		}
-		return max;
+            else if (price > minPrice)
+                maxProfit = Math.max(price - minPrice, maxProfit);
+        }
+		return maxProfit;
 	}
 
 }
